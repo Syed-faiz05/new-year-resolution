@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
 import { SiLeetcode } from "react-icons/si";
 
@@ -33,50 +35,62 @@ export default function Hero() {
 
           {/* CTA BUTTONS */}
           <div className="flex gap-4 mb-6">
-            <button
-              className="
-                px-6 py-3 rounded-xl
-                bg-cyan-500/20 text-cyan-400
-                border border-cyan-400/30
-                hover:bg-cyan-500/30 transition
-              "
-            >
-              View Projects
-            </button>
+            <Link to="/projects">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="
+                  px-6 py-3 rounded-xl
+                  bg-cyan-500/20 text-cyan-400
+                  border border-cyan-400/30
+                  hover:bg-cyan-500/30 transition
+                "
+              >
+                View Projects
+              </motion.button>
+            </Link>
 
-            <button
+            <motion.a
+              href="/Syed_Faiz_Resume.pdf"
+              download
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="
                 px-6 py-3 rounded-xl
                 bg-purple-500/20 text-purple-300
                 border border-purple-400/30
                 hover:bg-purple-500/30 transition
+                inline-flex items-center
               "
             >
               Resume
-            </button>
+            </motion.a>
           </div>
 
           {/* SOCIAL ICONS */}
           <div className="flex gap-5 text-white/70">
             <a
-              href="https://github.com/"
+              href="https://github.com/Syed-faiz05"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-cyan-400 transition"
             >
               <Github size={22} />
             </a>
 
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/syed-faiz-547a2a2a4/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-cyan-400 transition"
             >
               <Linkedin size={22} />
             </a>
 
             <a
-              href="https://leetcode.com/"
+              href="https://leetcode.com/u/Syed_Faiz05/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-cyan-400 transition"
             >
               <SiLeetcode size={22} />
@@ -87,17 +101,14 @@ export default function Hero() {
         {/* RIGHT PROFILE */}
         <div className="flex items-center justify-center">
           <div className="relative">
-            {/* Neon ring */}
             <div className="absolute inset-0 rounded-full border border-cyan-400/40 blur-sm" />
 
-            {/* Profile image */}
             <img
               src="/profile.jpg"
               alt="Syed Faiz"
               className="
                 w-56 h-56 md:w-64 md:h-64
-                rounded-full
-                object-cover
+                rounded-full object-cover
                 bg-white/10
                 border border-white/20
                 relative z-10

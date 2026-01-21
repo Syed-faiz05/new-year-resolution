@@ -47,15 +47,16 @@ export default function Contact() {
           <div className="flex items-center justify-center gap-3 mb-8 text-white">
             <Mail className="text-cyan-400" />
             <span className="text-white/80">
-              syedfaiz.dev@gmail.com
+              syedfaiz052004@gmail.com
             </span>
           </div>
 
           {/* ICON LINKS */}
           <div className="flex justify-center gap-6 mb-10">
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/syed-faiz-547a2a2a4/"
               target="_blank"
+              rel="noopener noreferrer"
               className="p-4 rounded-full bg-white/10 border border-white/20
               hover:border-cyan-400 hover:text-cyan-400 transition"
             >
@@ -63,8 +64,9 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://github.com"
+              href="https://github.com/Syed-faiz05"
               target="_blank"
+              rel="noopener noreferrer"
               className="p-4 rounded-full bg-white/10 border border-white/20
               hover:border-cyan-400 hover:text-cyan-400 transition"
             >
@@ -72,8 +74,9 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://leetcode.com"
+              href="https://leetcode.com/u/Syed_Faiz05/"
               target="_blank"
+              rel="noopener noreferrer"
               className="p-4 rounded-full bg-white/10 border border-white/20
               hover:border-cyan-400 hover:text-cyan-400 transition"
             >
@@ -83,8 +86,8 @@ export default function Contact() {
 
           {/* RESUME BUTTON */}
           <a
-            href="/resume.pdf"
-            target="_blank"
+            href="/Syed_Faiz_Resume.pdf"
+            download
             className="
               inline-flex items-center gap-2
               px-8 py-3
